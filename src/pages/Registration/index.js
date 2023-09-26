@@ -50,7 +50,7 @@ const Registration = () => {
       <div>
         <Toaster />
       </div>
-      <h1> Registration</h1>
+      <h1>Guvi Registration</h1>
       <input
         placeholder="Name"
         onChange={(e) =>

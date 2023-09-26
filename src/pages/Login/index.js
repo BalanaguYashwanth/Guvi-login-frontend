@@ -37,7 +37,7 @@ const Login = () => {
       <div>
         <Toaster />
       </div>
-      <h1> Login </h1>
+      <h1> Guvi Login </h1>
       <input
         placeholder="Email"
         onChange={(e) =>
