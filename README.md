@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Hosted URL - https://65132879e925920078ac7e83--splendid-gnome-93aeee.netlify.app/
+Hosted URL - https://65132879e925920078ac7e83--splendid-gnome-93aeee.netlify.app
 
 ## Available Scripts
 
