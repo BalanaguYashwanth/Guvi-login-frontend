@@ -1,0 +1,20 @@
+@mixin center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+@mixin inputStyles {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    width: 200px;
+}
+
+@mixin buttonStyles {
+    padding: 3px;
+    margin: 5px;
+}

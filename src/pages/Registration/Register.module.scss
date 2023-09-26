@@ -1,0 +1,14 @@
+@import '../../styles/mixins.scss';
+
+
+.container {
+    @include center;
+
+    input {
+        @include inputStyles;
+    }
+
+    button {
+        @include buttonStyles;
+    }
+}

@@ -1,0 +1,19 @@
+@import '../../styles/mixins.scss';
+
+
+.container {
+    @include center;
+
+    input {
+        @include inputStyles;
+    }
+
+    select {
+        @include inputStyles;
+        width: 220px;
+    }
+
+    button {
+        @include buttonStyles;
+    }
+}
