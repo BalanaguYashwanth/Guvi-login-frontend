@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { HOMEPAGE } from "../../utils/constants";
+import { HOMEPAGE, VALIDATE_DATE_REGEX } from "../../utils/constants";
 import styles from "./Home.module.scss";
 import {
   getDetailsFromToken,
@@ -20,13 +20,17 @@ const Homepage = () => {
   const handleSubmit = async () => {
     const { age, gender, dob, phone, name, email } = form;
     if (age && gender && dob && phone && name && email) {
-      try {
-        form.age = parseInt(age);
-        form.gender = parseInt(gender);
-        const response = await updateUserDetails(form);
-        toast.success("Successfully updated");
-      } catch (err) {
-        getErrorNotification(err);
+      if (dob.match(VALIDATE_DATE_REGEX)) {
+        try {
+          form.age = parseInt(age);
+          form.gender = parseInt(gender);
+          await updateUserDetails(form);
+          toast.success("Successfully updated");
+        } catch (err) {
+          getErrorNotification(err);
+        }
+      } else {
+        toast.error("Please enter valid date");
       }
     } else {
       toast.error("Please fill all inputs");
